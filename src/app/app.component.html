@@ -1,7 +1,10 @@
 <h3>Chart Image in Excel</h3>
-<div id="chartContainer" style="position: relative; height:100vh; width:100vw">
+<div id="chartContainer" style="position: relative; height:50vh; width:50vw">
     <canvas id="myChart"></canvas>
-    <button class="btn btn-info" (click)="exportAsXLSX()">Excel Import</button>
+    <button class="btn btn-info" (click)="exportAsXLSX()">Excel Import</button><br>
+    
+    <label for="exampleColorInput" class="form-label">Color picker</label>
+<input type="color" class="form-control form-control-color" id="data" value="ctx" title="Choose your color">
 </div>
 
 <!-- <button class="btn btn-secondary" (click)="download();">Download</button> -->

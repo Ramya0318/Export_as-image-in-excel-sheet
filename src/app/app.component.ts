@@ -30,11 +30,12 @@ export class AppComponent implements OnInit{
     this.getdataapi();
   }
 
- 
+
   
  index='';
 
  getdataapi(){
+ 
  
   const ctx = document.getElementById('myChart');
 
@@ -60,9 +61,6 @@ export class AppComponent implements OnInit{
 
 
 }
-  
-
- 
 
   download(){
     // this.getdataapi();
@@ -75,12 +73,13 @@ export class AppComponent implements OnInit{
     worksheet.columns = [
       { header: 'Id', key: 'id', width: 10 },
       { header: 'Name', key: 'name', width: 32 },
-      { header: 'Image', key: 'image', width: 40 },
+      { header: 'Image', key: 'image', width: 60,},
     ];
 
     // Add a couple of Rows by key-value, after the last current row, using the column keys
-    worksheet.addRow({ id: 1, name: 'John Doe' });
-    worksheet.addRow({ id: 2, name: 'Jane Doe' });
+    worksheet.addRow({ id: 1, name: 'Ramya' });
+    worksheet.addRow({ id: 2, name: 'Gayu' });
+    
 
     worksheet.properties.defaultRowHeight = 1000;
 
@@ -89,7 +88,7 @@ export class AppComponent implements OnInit{
     a.id='box'
     const canvas = document.getElementById('myChart') as HTMLCanvasElement
 
-    a.href = canvas.toDataURL("image/png",1)
+    a.href = canvas.toDataURL("image/png",0.5)
     a.download  = 'report.png';
     // a.click();
     
@@ -107,7 +106,7 @@ export class AppComponent implements OnInit{
 
    
 
-    worksheet.addImage(imageId2, 'C2:D2');
+    worksheet.addImage(imageId2, 'C2:F3');
   
 
    
@@ -119,9 +118,6 @@ export class AppComponent implements OnInit{
 
     row.height = 120;
 
-    
-    
-    
     
   }
 
